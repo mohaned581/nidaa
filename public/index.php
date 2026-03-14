@@ -41,6 +41,9 @@ switch ($page) {
     case 'submit_request':
         require_once APP_ROOT . '/views/user/request_aid.php';
         break;
+    case 'contact_admin':
+        require_once APP_ROOT . '/views/user/contact.php';
+        break;
 
     // Donor Routes
     case 'donor_dashboard':
@@ -54,7 +57,24 @@ switch ($page) {
     case 'admin_dashboard':
         require_once APP_ROOT . '/views/admin/dashboard.php';
         break;
+    case 'admin_posts':
+        require_once APP_ROOT . '/views/admin/posts.php';
+        break;
+    case 'admin_documents':
+        require_once APP_ROOT . '/views/admin/documents.php';
+        break;
+    case 'admin_messages':
+        require_once APP_ROOT . '/views/admin/messages.php';
+        break;
+    case 'admin_reports':
+        require_once APP_ROOT . '/views/admin/reports.php';
+        break;
         
+    // Public/Programs View
+    case 'programs':
+        require_once APP_ROOT . '/views/programs.php';
+        break;
+
     default:
         echo "<h1>404 Not Found</h1>";
         break;
