@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS orders (
     city VARCHAR(50) NOT NULL,
     category VARCHAR(50) NOT NULL, -- Health, Food, etc.
     message TEXT NOT NULL,
+    document_path VARCHAR(255) DEFAULT NULL,
     status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE

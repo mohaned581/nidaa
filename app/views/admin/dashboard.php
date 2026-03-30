@@ -119,6 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
                     <th>Category</th>
                     <th>Location</th>
                     <th>Message</th>
+                    <th>Document</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -130,6 +131,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
                         <td><?php echo htmlspecialchars($req['category']); ?></td>
                         <td><?php echo htmlspecialchars($req['city'] . ', ' . $req['country']); ?></td>
                         <td><?php echo htmlspecialchars(substr($req['message'], 0, 30)) . '...'; ?></td>
+                        <td>
+                            <?php if (!empty($req['document_path'])): ?>
+                                <a href="<?php echo htmlspecialchars($req['document_path']); ?>" target="_blank" style="color: #007bff; text-decoration: underline;">View</a>
+                            <?php else: ?>
+                                <span style="color: #6c757d;">None</span>
+                            <?php endif; ?>
+                        </td>
                         <td>
                             <span style="padding: 4px 8px; border-radius: 4px; background: 
                                 <?php 

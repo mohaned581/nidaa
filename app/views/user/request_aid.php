@@ -10,7 +10,7 @@
         </div>
     <?php endif; ?>
 
-    <form action="index.php?page=submit_request" method="POST">
+    <form action="index.php?page=submit_request" method="POST" enctype="multipart/form-data">
         
         <div class="form-group">
             <label for="category">Type of Aid Needed</label>
@@ -47,6 +47,11 @@
         <div class="form-group">
             <label for="message">Detailed Situation / Message</label>
             <textarea id="message" name="message" rows="5" required placeholder="Please describe your situation and what you specifically need..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="document">Supporting Document (Optional)</label>
+            <input type="file" id="document" name="document" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>

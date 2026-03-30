@@ -34,7 +34,7 @@
         </div>
 
         <hr style="margin: 20px 0;">
-        <h4>Payment Details (Mock)</h4>
+        <h4>Payment Details (Fake payment gateway)</h4>
         
         <div class="form-group">
             <label>Card Number</label>

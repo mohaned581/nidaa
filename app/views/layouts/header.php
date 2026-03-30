@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.php?page=home" class="logo">AidConnect</a>
+            <a href="index.php?page=home" class="logo">Nidaa org</a>
             <div class="nav-links">
                 <a href="index.php?page=home">Home</a>
                 <a href="index.php?page=programs">Programs</a>
